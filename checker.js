@@ -19,9 +19,9 @@ function convertToArray(grid) {
   /**
    * checks if there is any number (n) repeats horizontally in the 2 dimensional array
    * @param {array} grid 
-   * @param {number} y 
-   * @param {number} x 
-   * @param {number} n 
+   * @param {number} y vertical item to st art at
+   * @param {number} x horizontal item to start at
+   * @param {number} n number to find repetitive for
    */
   function checkHorizontally(grid, y, x, n) {
     for (let i = x; i < 9; i++) {
@@ -34,9 +34,9 @@ function convertToArray(grid) {
   /**
    * checks if there is any number (n) repeats vertically in the 2 dimensional array
    * @param {array} grid 
-   * @param {number} y 
-   * @param {number} x 
-   * @param {number} n 
+   * @param {number} y vertical item to st art at
+   * @param {number} x horizontal item to start at
+   * @param {number} n number to find repetitive for
    */
   function checkVertically(grid, y, x, n) {
     for (let i = y; i < 9; i++) {

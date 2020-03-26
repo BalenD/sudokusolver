@@ -163,9 +163,10 @@ class Solver {
 
   /**
    * assigns a number to a tile using an elimination process
-   * @param {object} values 
-   * @param {string} tile 
-   * @param {string} digit 
+   * 
+   * @param {object} values the grid
+   * @param {string} tile the tile (field)
+   * @param {string} digit eliminate all values from tile except digit
    */
   assign(values, tile, digit) {
     const tileValues = values[tile];
@@ -181,9 +182,9 @@ class Solver {
 
   /**
    * uses the process of elimination to eliminate numbers from a tile(field)
-   * @param {array} values 
-   * @param {string} tile 
-   * @param {string} digit 
+   * @param {array} values grid
+   * @param {string} tile tile to remove digit from
+   * @param {string} digit digit to remove from tile and associated peer fields
    */
   eliminate(values, tile, digit) {
     if (!values[tile].includes(digit)) return values;
@@ -233,7 +234,7 @@ class Solver {
 
   /**
    * finds any field with more than 1 number, and initiates the elimination process on that field
-   * @param {array} values 
+   * @param {array} values grid
    */
   search(values) {
     if (!values) return null;
