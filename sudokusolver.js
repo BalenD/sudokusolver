@@ -1,5 +1,5 @@
-const Solver = require('./solver');
-const {convertToArray, isCorrect} = require('./checker');
+const Solver = require('./lib/solver');
+const {convertToArray, isCorrect} = require('./lib/checker');
 
 const solver = new Solver();
 

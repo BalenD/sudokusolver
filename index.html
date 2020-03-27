@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>sudoku solver</title>
+    <link href="stylesheet.css" rel="stylesheet" type="text/css">
+    
+</head>
+
+<body>
+    <div class="container">
+    <table>
+        <tr>
+            <td>
+                <table>
+                    <tr></tr>
+                    <tr>
+                        <td class="field" id="A1" contenteditable="true">0</td>
+                        <td class="field" id="A2" contenteditable="true">0</td>
+                        <td class="field" id="A3" contenteditable="true">0</td>
+                    </tr>
+                    <tr>
+                        <td class="field" id="B1" contenteditable="true">0</td>
+                        <td class="field" id="B2" contenteditable="true">0</td>
+                        <td class="field" id="B3" contenteditable="true">0</td>
+                    </tr>
+                    <tr>
+                        <td class="field" id="C1" contenteditable="true">0</td>
+                        <td class="field" id="C2" contenteditable="true">0</td>
+                        <td class="field" id="C3" contenteditable="true">0</td>
+                    </tr>
+                </table>
+            </td>
+            <td>
+                <table>
+                    <tr></tr>
+                    <tr>
+                        <td class="field" id="A4" contenteditable="true">0</td>
+                        <td class="field" id="A5" contenteditable="true">0</td>
+                        <td class="field" id="A6" contenteditable="true">0</td>
+                    </tr>
+                    <tr>
+                        <td class="field" id="B4" contenteditable="true">0</td>
+                        <td class="field" id="B5" contenteditable="true">0</td>
+                        <td class="field" id="B6" contenteditable="true">0</td>
+                    </tr>
+                    <tr>
+                        <td class="field" id="C4" contenteditable="true">0</td>
+                        <td class="field" id="C5" contenteditable="true">0</td>
+                        <td class="field" id="C6" contenteditable="true">0</td>
+                    </tr>
+                </table>
+            </td>
+            <td>
+                <table>
+                    <tr></tr>
+                    <tr>
+                        <td class="field" id="A7" contenteditable="true">0</td>
+                        <td class="field" id="A8" contenteditable="true">0</td>
+                        <td class="field" id="A9" contenteditable="true">0</td>
+                    </tr>
+                    <tr>
+                        <td class="field" id="B7" contenteditable="true">0</td>
+                        <td class="field" id="B8" contenteditable="true">0</td>
+                        <td class="field" id="B9" contenteditable="true">0</td>
+                    </tr>
+                    <tr>
+                        <td class="field" id="C7" contenteditable="true">0</td>
+                        <td class="field" id="C8" contenteditable="true">0</td>
+                        <td class="field" id="C9" contenteditable="true">0</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <table>
+                    <tr></tr>
+                    <tr>
+                        <td class="field" id="D1" contenteditable="true">0</td>
+                        <td class="field" id="D2" contenteditable="true">0</td>
+                        <td class="field" id="D3" contenteditable="true">0</td>
+                    </tr>
+                    <tr>
+                        <td class="field" id="E1" contenteditable="true">0</td>
+                        <td class="field" id="E2" contenteditable="true">0</td>
+                        <td class="field" id="E3" contenteditable="true">0</td>
+                    </tr>
+                    <tr>
+                        <td class="field" id="F1" contenteditable="true">0</td>
+                        <td class="field" id="F2" contenteditable="true">0</td>
+                        <td class="field" id="F3" contenteditable="true">0</td>
+                    </tr>
+                </table>
+            </td>
+            <td>
+                <table>
+                    <tr></tr>
+                    <tr>
+                        <td class="field" id="D4" contenteditable="true">0</td>
+                        <td class="field" id="D5" contenteditable="true">0</td>
+                        <td class="field" id="D6" contenteditable="true">0</td>
+                    </tr>
+                    <tr>
+                        <td class="field" id="E4" contenteditable="true">0</td>
+                        <td class="field" id="E5" contenteditable="true">0</td>
+                        <td class="field" id="E6" contenteditable="true">0</td>
+                    </tr>
+                    <tr>
+                        <td class="field" id="F4" contenteditable="true">0</td>
+                        <td class="field" id="F5" contenteditable="true">0</td>
+                        <td class="field" id="F6" contenteditable="true">0</td>
+                    </tr>
+                </table>
+            </td>
+            <td>
+                <table>
+                    <tr></tr>
+                    <tr>
+                        <td class="field" id="D7" contenteditable="true">0</td>
+                        <td class="field" id="D8" contenteditable="true">0</td>
+                        <td class="field" id="D9" contenteditable="true">0</td>
+                    </tr>
+                    <tr>
+                        <td class="field" id="E7" contenteditable="true">0</td>
+                        <td class="field" id="E8" contenteditable="true">0</td>
+                        <td class="field" id="E9" contenteditable="true">0</td>
+                    </tr>
+                    <tr>
+                        <td class="field" id="F7" contenteditable="true">0</td>
+                        <td class="field" id="F8" contenteditable="true">0</td>
+                        <td class="field" id="F9" contenteditable="true">0</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <table>
+                    <tr></tr>
+                    <tr>
+                        <td class="field" id="G1" contenteditable="true">0</td>
+                        <td class="field" id="G2" contenteditable="true">0</td>
+                        <td class="field" id="G3" contenteditable="true">0</td>
+                    </tr>
+                    <tr>
+                        <td class="field" id="H1" contenteditable="true">0</td>
+                        <td class="field" id="H2" contenteditable="true">0</td>
+                        <td class="field" id="H3" contenteditable="true">0</td>
+                    </tr>
+                    <tr>
+                        <td class="field" id="I1" contenteditable="true">0</td>
+                        <td class="field" id="I2" contenteditable="true">0</td>
+                        <td class="field" id="I3" contenteditable="true">0</td>
+                    </tr>
+                </table>
+            </td>
+            <td>
+                <table>
+                    <tr></tr>
+                    <tr>
+                        <td class="field" id="G4" contenteditable="true">0</td>
+                        <td class="field" id="G5" contenteditable="true">0</td>
+                        <td class="field" id="G6" contenteditable="true">0</td>
+                    </tr>
+                    <tr>
+                        <td class="field" id="H4" contenteditable="true">0</td>
+                        <td class="field" id="H5" contenteditable="true">0</td>
+                        <td class="field" id="H6" contenteditable="true">0</td>
+                    </tr>
+                    <tr>
+                        <td class="field" id="I4" contenteditable="true">0</td>
+                        <td class="field" id="I5" contenteditable="true">0</td>
+                        <td class="field" id="I6" contenteditable="true">0</td>
+                    </tr>
+                </table>
+            </td>
+            <td>
+                <table>
+                    <tr></tr>
+                    <tr>
+                        <td class="field" id="G7" contenteditable="true">0</td>
+                        <td class="field" id="G8" contenteditable="true">0</td>
+                        <td class="field" id="G9" contenteditable="true">0</td>
+                    </tr>
+                    <tr>
+                        <td class="field" id="H7" contenteditable="true">0</td>
+                        <td class="field" id="H8" contenteditable="true">0</td>
+                        <td class="field" id="H9" contenteditable="true">0</td>
+                    </tr>
+                    <tr>
+                        <td class="field" id="I7" contenteditable="true">0</td>
+                        <td class="field" id="I8" contenteditable="true">0</td>
+                        <td class="field" id="I9" contenteditable="true">0</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+    <div class="round">
+        <a class="button" id="submitBtn">solve</a>
+        <a class="button" id="checkBtn">check</a>
+        <a class="button" id="resetBtn">reset</a>
+    </div>
+    </div>
+    <script type="module" src="script.js"></script>
+</but>
+
+</html>
