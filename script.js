@@ -1,19 +1,21 @@
 import Solver from './lib/solver.js';
 import { isCorrect, convertToArray, verticalToLetter } from './lib/checker.js'
 
+const solver = new Solver();
 
-const fields = [...document.getElementsByClassName('field')];
+const fields = getFields();
 const submitBtn = document.getElementById('submitBtn');
 const checkBtn = document.getElementById('checkBtn');
 const resetBtn = document.getElementById('resetBtn');
 
-const solver = new Solver();
 
 let grid = '';
 let currentGrid;
+resetFields();
 
 
 submitBtn.addEventListener('click', () => {
+    grid = '';
     for (const field of fields) {
         grid += field.textContent;
     }
@@ -23,7 +25,6 @@ submitBtn.addEventListener('click', () => {
         field.textContent = solution[s];
     }
     currentGrid = solution;
-    grid = '';
 });
 
 checkBtn.addEventListener('click', () => {
@@ -49,8 +50,18 @@ checkBtn.addEventListener('click', () => {
     }
 });
 
-resetBtn.addEventListener('click', () => {
+resetBtn.addEventListener('click', resetFields);
+
+function resetFields() {
     for (const field of fields) {
-        field.textContent = 0;
+        field.textContent = '0';
     }
-});
+}
+
+function getFields() {
+    const tempArr = []; 
+    for (const c of solver.squares) {
+        tempArr.push(document.getElementById(c));
+    }
+    return tempArr;
+}
